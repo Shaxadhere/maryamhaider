@@ -1,33 +1,14 @@
 import { Card, CardBody } from "@chakra-ui/react";
-import { useRef } from "react";
 import AutoScrollHStack from "../misc/AutoScrollHStack";
 import { COLORS } from "../../config/constants/colors";
 
 const Reviews = () => {
-  const ref = useRef(null);
-
   const array = [
     {
-      name: "Techon 3 (2021)",
-      description: "Winner of techon mobile app development competetion",
-    },
-    {
-      name: "Techon 1 (2019)",
-      description: "Winner of techon in web-application development",
-    },
-    {
-      name: "Techwiz (2019)",
-      description:
-        "Participated in word-wide web application development Competetion",
-    },
-    {
-      name: "Ecompetencia (2019)",
-      description: "Winner of ecompetencia-2019 in web application development",
-    },
-    {
-      name: "International Bebras Community (2016)",
-      description:
-        "International challenge on informatics and computational thinking",
+      name: "Meta Certified Creative Strategy Professional (2025)",
+      description: "Meta",
+      creds:"https://www.credly.com/badges/ad020dfb-6365-4757-b519-027454bc8b41/linked_in?t=svkydi",
+      provider:"https://meta.com"
     },
   ];
 

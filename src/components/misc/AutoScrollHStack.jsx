@@ -12,9 +12,12 @@ const AutoScrollHStack = ({ data }) => {
 
     const startScrolling = () => {
       scrollInterval = setInterval(() => {
-        if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth) {
+        if (
+          scrollContainer.scrollLeft + scrollContainer.clientWidth >=
+          scrollContainer.scrollWidth
+        ) {
           // Smooth scroll back to the start
-        //   scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
+          //   scrollContainer.scrollTo({ left: 0, behavior: "smooth" });
         } else {
           scrollContainer.scrollLeft += 2; // Scroll right slowly
         }
@@ -38,7 +41,7 @@ const AutoScrollHStack = ({ data }) => {
 
   return (
     <HStack
-     className="scrollbar-hidden"
+      className="scrollbar-hidden"
       ref={scrollRef}
       h="full"
       spacing={4}
@@ -56,8 +59,12 @@ const AutoScrollHStack = ({ data }) => {
           minW="250px"
           maxW="250px"
         >
-          <Text fontSize="12px">{item.description}</Text>
-          <Heading fontSize="16px">{item.name}</Heading>
+          <Text as="a" target="_blank" href={item.provider} fontSize="12px">
+            {item.description}
+          </Text>
+          <Heading fontSize="16px" as="a" target="_blank" href={item.creds}>
+            {item.name}
+          </Heading>
         </Flex>
       ))}
     </HStack>
