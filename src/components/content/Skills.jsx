@@ -23,7 +23,7 @@ const Skills = () => {
       m="auto"
       maxW={{ base: "calc(100% - 50px)", lg: "full" }}
       role="group"
-      bg={COLORS.PRIMARY}
+      bg={COLORS.DARK_PINK}
       h="full"
       rounded="24px"
     >

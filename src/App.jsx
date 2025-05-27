@@ -122,18 +122,6 @@ const App = () => {
           </MotionGridItem>
         ))}
       </Grid>
-      <MotionBox
-        style={{ marginTop: "20px" }}
-        ref={experienceRef}
-        initial="hidden"
-        animate={experienceControls}
-        variants={{
-          hidden: { opacity: 0, y: 50 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-        }}
-      >
-        <Experience />
-      </MotionBox>
 
       <MotionBox
         ref={projectsRef}

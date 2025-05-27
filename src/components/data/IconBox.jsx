@@ -1,15 +1,16 @@
-import { Image, Flex } from "@chakra-ui/react";
+import { Image, Flex, Icon } from "@chakra-ui/react";
 import React from "react";
+import { COLORS } from "../../config/constants/colors";
 
-const IconBox = ({ title, link = "#", image, imageProps, ...rest }) => {
+const IconBox = ({ title, link = "#", image, imageProps, icon, ...rest }) => {
   return (
     <Flex
-      h={{ base: "85px", lg: "100px" }}
-      w={{ base: "full", lg: "104px" }}
+      h={{ base: "45px", lg: "75px" }}
+      w={{ base: "full", lg: "75px" }}
       rounded="8px"
       justify={"center"}
       align={"center"}
-      bg="#fff"
+      bg={COLORS.DARK_PINK}
       maxW="full"
       as="a"
       target="_blank"
@@ -19,18 +20,14 @@ const IconBox = ({ title, link = "#", image, imageProps, ...rest }) => {
       flexDir="column"
       {...rest}
     >
-      <Image
+      <Icon
+        as={icon}
         maxW="full"
-        maxH="60px"
-        w="60px"
+        maxH="55px"
+        w="55px"
         h="full"
         src={image}
-        filter="grayscale(100%)"
-        _groupHover={{
-          filter: "grayscale(0%)",
-          //   transform: "translateY(-140%)",
-          transition: "all 0.3s ease-in-out",
-        }}
+        color={COLORS.PINK_TEXT}
         {...imageProps}
       />
     </Flex>

@@ -25,12 +25,12 @@ const Brief = () => {
     <Card
       m="auto"
       maxW={{ base: "calc(100% - 50px)", lg: "full" }}
-      bg="#0e0e0e"
+      bg={COLORS.BABY_PINK}
       h="full"
       rounded="24px"
     >
       <CardBody>
-        <Flex flexDir="column" h="full" justify="space-around" color="#d9d9d9">
+        <Flex flexDir="column" h="full" justify="space-around" color={COLORS.PINK_TEXT}>
           <Flex
             mb={{ base: 2, lg: 0 }}
             flexDir={{ base: "column", lg: "row" }}
@@ -51,7 +51,7 @@ const Brief = () => {
                 color="white"
                 fontSize="lg"
                 fontWeight="bold"
-                bgGradient="linear(to-r, purple.500, pink.500, red.500)"
+                bg={COLORS.DARK_PINK}
                 _hover={{
                   transform: "scale(1.05)",
                   boxShadow: "xl",
@@ -59,7 +59,7 @@ const Brief = () => {
                 _active={{ color: "dark" }}
                 transition="all 0.3s ease-in-out"
               >
-                <Text zIndex={1}>Hire me</Text>
+                <Text zIndex={1} color={COLORS.PINK_TEXT}>Hire me</Text>
                 <Box
                   position="absolute"
                   top={0}
@@ -77,7 +77,7 @@ const Brief = () => {
                   left={0}
                   right={0}
                   bottom={0}
-                  bgGradient="linear(to-r, transparent, white, transparent)"
+                  bgGradient="linear(to-r, transparent, pink, transparent)"
                   opacity={0.5}
                   transform="skew(-12deg) scale(1.5)"
                   animation={`${shine} 3s infinite 0.3s`}

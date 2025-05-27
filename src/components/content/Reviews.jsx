@@ -1,6 +1,7 @@
 import { Card, CardBody } from "@chakra-ui/react";
 import { useRef } from "react";
 import AutoScrollHStack from "../misc/AutoScrollHStack";
+import { COLORS } from "../../config/constants/colors";
 
 const Reviews = () => {
   const ref = useRef(null);
@@ -34,7 +35,7 @@ const Reviews = () => {
     <Card
       m="auto"
       maxW={{ base: "calc(100% - 50px)", lg: "full" }}
-      bg="#0e0e0e"
+      bg={COLORS.BABY_PINK}
       h={{ base: "fit-content", lg: "full" }}
       rounded="24px"
     >

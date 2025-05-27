@@ -1,21 +1,9 @@
 import APP_IMAGES from "./images";
-import JavascriptImage from "/images/js.png";
-import ReactImage from "/images/react.png";
-import NodeImage from "/images/nodejs.png";
-import ExpressImage from "/images/express.png";
-import MongoDBImage from "/images/mongodb.svg";
-import CSSImage from "/images/css.png";
-import CityImage from "/images/city.jpg";
-import ProfilePicture from "/images/avatar.png"
-import ProfilePictureBlurred from "/images/avatar-small.png"
-
-//Companies Logos
-import SimplifiLogo from "/images/companies/simplifi-logo.png"
 
 export const INFORMATION = {
 
-    PROFILE_PICTURE: '/maryam haider.jpg',
-    ProfilePictureBlurred,
+    PROFILE_PICTURE: '/maryam.png',
+    ProfilePictureBlurred: "/maryam-reduced.jpg",
 
     NAME: "MARYAM HAIDER",
     EMAIL: "maryamhaider34@gmail.com ",
@@ -28,12 +16,12 @@ identities.`,
     RESUME: "/Maryam Haider 2D Animator and Graphic Designer Resume .pdf",
 
     LOCAL_TIME_ZONE: "Asia/Karachi",
-    CITY_PICTURE: CityImage,
+    CITY_PICTURE: '/city.jpg',
     CITY: "Karachi",
     COUNTRY: "Pakistan",
 
     EXPIRIENCE: 4,
-    TOTAL_PROJECTS: 32,
+    FREELANCE: 2,
 
     LINKS: {
         BEHANCE: "https://www.behance.net/maryamhaider2",
@@ -41,10 +29,10 @@ identities.`,
         CONTACT_LINK: "mailto:maryamhaider34@gmail.com",
     },
     SKILLS: {
-        'Adobe After Effects': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/2101px-Adobe_After_Effects_CC_icon.svg.png',
-        'Adobe Photoshop': 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/2101px-Adobe_Photoshop_CC_icon.svg.png',
-        'Adobe Premiere Pro': 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/2101px-Adobe_Premiere_Pro_CC_icon.svg.png',
-        'Adobe Illustrator': 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/1051px-Adobe_Illustrator_CC_icon.svg.png',
+        'Adobe After Effects': 'ae.png',
+        'Adobe Photoshop': 'ps.png',
+        'Adobe Premiere Pro': 'apr.png',
+        'Adobe Illustrator': 'ai.png',
     },
     PROJECTS: [
         {
@@ -74,7 +62,7 @@ Lead a team of designers for a brand to exceed client goals and expectations.
 Creating research based designs for various campaigns`,
             logo: '/images/companies/ogilvy-logo.png',
             logoStyles: {
-                width: "200px",
+                width: "100px",
                 filter: "brightness(0) invert(1);"
             },
             onHoverTransform: "translate(-62%, -59%)"
@@ -90,7 +78,7 @@ Produced animated introductory & explainer videos to simplify complex concepts.
 Developed innovative approaches for 2D animations and contributed to key visual designs.`,
             logo: "/images/companies/ptax-logo.png",
             logoStyles: {
-                width: "200px",
+                width: "100px",
                 filter: "brightness(0) invert(1);"
             },
             onHoverTransform: "translate(-40%, -190%)"
@@ -105,7 +93,7 @@ Designed and animated vibrant class schedules to boost visual appeal.`,
             logo: "/images/companies/artt-logo.png",
             logoStyles: {
                 filter: "invert(1) grayscale(1)",
-                width: "200px"
+                width: "100px"
             },
             onHoverTransform: "translate(-62%, -70%)"
         },

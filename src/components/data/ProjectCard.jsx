@@ -8,6 +8,7 @@ import {
   Card,
   CardBody,
 } from "@chakra-ui/react";
+import { COLORS } from "../../config/constants/colors";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -16,9 +17,9 @@ const ProjectCard = ({ project }) => {
       maxW={{ base: "calc(100% - 50px)", lg: "full" }}
       w="full"
       h="260px"
-      bg="#0e0e0e"
+      bg={COLORS.BABY_PINK}
       rounded="24px"
-      color="#d9d9d9"
+      color={COLORS.PINK_TEXT}
       className="image-container"
       _before={{
         backgroundImage: `url(${project.thumbnail})`,

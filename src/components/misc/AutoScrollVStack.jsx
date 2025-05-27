@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { VStack, Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { VStack, Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import { COLORS } from "../../config/constants/colors";
 
 const AutoScrollVStack = ({ data }) => {
   const scrollRef = useRef(null);
@@ -42,8 +43,9 @@ const AutoScrollVStack = ({ data }) => {
     <VStack
       className="scrollbar-hidden"
       align="stretch"
-      maxH={{base:"auto",lg:"600px"}}
+      maxH={{ base: "auto", lg: "600px" }}
       overflowY="auto"
+      gap={3}
       ref={scrollRef}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -52,24 +54,41 @@ const AutoScrollVStack = ({ data }) => {
         <Box
           key={index}
           rounded="12px"
-          color="#d9d9d9"
+          color={COLORS.PINK_TEXT}
           py="16px"
           px="12px"
           cursor="pointer"
           as="a"
           target="_blank"
           href={item.link}
+          role="group"
+          pos={"relative"}
+          bg={COLORS.BABY_PINK}
           _hover={{
             shadow: "md",
-            bg: "#1f1f1f",
+            bg: COLORS.DARK_PINK,
             transition: "all 0.3s ease-in-out",
           }}
         >
-          <Flex justify="space-between">
-            <Heading fontSize="16px">{item.title}</Heading>
-            <Text>{item.date}</Text>
+          <Flex flexDir={"column"}>
+            <Heading fontSize="16px">{item.designation}</Heading>
+            <Text>{item.company}</Text>
           </Flex>
-          <Text color="#fff">{item.category}</Text>
+          <Text color={COLORS.PINK_TEXT}>{item.timeline}</Text>
+          {item.logo && (
+            <Image
+              pos={"absolute"}
+              right={0}
+              bottom={0}
+              opacity={0.2}
+              filter={"invert(1) grayscale(1)"}
+              src={item.logo}
+              h="auto"
+              alt={item.company}
+              transition={"all 0.3s ease"}
+              {...item.logoStyles}
+            />
+          )}
         </Box>
       ))}
     </VStack>

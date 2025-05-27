@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { HStack, Flex, Text, Heading } from "@chakra-ui/react";
+import { COLORS } from "../../config/constants/colors";
 
 const AutoScrollHStack = ({ data }) => {
   const scrollRef = useRef(null);
@@ -41,7 +42,7 @@ const AutoScrollHStack = ({ data }) => {
       ref={scrollRef}
       h="full"
       spacing={4}
-      color="#d9d9d9"
+      color={COLORS.PINK_TEXT}
       overflowX="auto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

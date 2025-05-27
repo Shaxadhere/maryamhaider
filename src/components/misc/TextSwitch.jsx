@@ -1,6 +1,7 @@
 import { Heading, chakra } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { COLORS } from "../../config/constants/colors";
 
 const MotionHeading = motion(Heading); // Motion variant of Chakra Heading
 const MotionSpan = motion(chakra.span); // Motion variant of Chakra span
@@ -11,7 +12,7 @@ const TextSwitch = ({ initalValue, hoveredValue }) => {
   return (
     <MotionHeading
       textAlign={{ base: "center", lg: "left" }}
-      color="#d9d9d9"
+      color={COLORS.PINK_TEXT}
       fontSize="24px"
       onHoverStart={() => setIsHovered(true)} // Set hover to true on hover start
       onHoverEnd={() => setIsHovered(false)} // Reset hover on hover end
