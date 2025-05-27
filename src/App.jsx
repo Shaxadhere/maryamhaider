@@ -123,7 +123,7 @@ const App = () => {
         ))}
       </Grid>
 
-      <MotionBox
+      {/* <MotionBox
         ref={projectsRef}
         initial="hidden"
         animate={projectsControls}
@@ -133,7 +133,7 @@ const App = () => {
         }}
       >
         <ProjectsList />
-      </MotionBox>
+      </MotionBox> */}
 
     </Box>
   );

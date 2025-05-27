@@ -6,7 +6,12 @@ import { Flex } from "@chakra-ui/react";
 import APP_IMAGES from "../../config/constants/images";
 import { INFORMATION } from "../../config/constants/information";
 import { COLORS } from "../../config/constants/colors";
-import { LiaBehance, LiaBehanceSquare, LiaEnvelopeSquareSolid, LiaLinkedin } from "react-icons/lia";
+import {
+  LiaBehance,
+  LiaBehanceSquare,
+  LiaEnvelopeSquareSolid,
+  LiaLinkedin,
+} from "react-icons/lia";
 
 const Links = () => {
   return (
@@ -24,13 +29,13 @@ const Links = () => {
         </Heading>
       </Flex>
       <Box />
-      <SimpleGrid
+      <Flex
         w="full"
         mt={"28px"}
-        spacing={2}
         columns={{ base: 4, lg: 3 }}
         alignSelf={"center"}
-        justifyContent={"space-between"}
+        gap={2}
+        className={"links-stack"}
       >
         {[
           {
@@ -60,7 +65,7 @@ const Links = () => {
             key={index}
           />
         ))}
-      </SimpleGrid>
+      </Flex>
     </Card>
   );
 };

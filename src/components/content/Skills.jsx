@@ -4,6 +4,7 @@ import {
   CardBody,
   Flex,
   Heading,
+  Icon,
   Image,
   Text,
   VStack,
@@ -12,8 +13,10 @@ import GlareIcon from "../icons/GlareIcon";
 import { INFORMATION } from "../../config/constants/information";
 import { COLORS } from "../../config/constants/colors";
 import { motion } from "framer-motion";
+import { SiAdobeillustrator } from "react-icons/si";
 
 const MotionImage = motion(Image);
+const MotionIcon = motion(Icon);
 
 const Skills = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null);
@@ -37,14 +40,15 @@ const Skills = () => {
         p="40px"
       >
         <Flex flexDir="column" justify="space-between" color="#e8e6ee" h="full">
-          <Flex justify="space-between" alignItems="center" w="full">
+          <Flex justify="space-between" alignItems="start" w="full">
             <Heading fontSize="24px">SKILLS</Heading>
 
             {hoveredSkill ? (
-              <MotionImage
+              <Icon
                 key={hoveredSkill} // Ensures animation retriggers when hoveredSkill changes
                 rounded="lg"
-                src={INFORMATION.SKILLS[hoveredSkill]}
+                // src={INFORMATION.SKILLS[hoveredSkill]}
+                as={INFORMATION.SKILLS[hoveredSkill]}
                 alt={hoveredSkill}
                 w="120px"
                 h="120px"

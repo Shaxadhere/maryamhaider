@@ -1,3 +1,4 @@
+import { SiAdobeaftereffects, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro } from "react-icons/si";
 import APP_IMAGES from "./images";
 
 export const INFORMATION = {
@@ -29,10 +30,10 @@ identities.`,
         CONTACT_LINK: "mailto:maryamhaider34@gmail.com",
     },
     SKILLS: {
-        'Adobe After Effects': 'ae.png',
-        'Adobe Photoshop': 'ps.png',
-        'Adobe Premiere Pro': 'apr.png',
-        'Adobe Illustrator': 'ai.png',
+        'Adobe After Effects': SiAdobeaftereffects,
+        'Adobe Photoshop': SiAdobephotoshop,
+        'Adobe Premiere Pro': SiAdobepremierepro,
+        'Adobe Illustrator': SiAdobeillustrator,
     },
     PROJECTS: [
         {

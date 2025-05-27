@@ -114,3 +114,13 @@ body {
 .animate-shine {
   animation: shine 3s infinite;
 }
+
+.links-stack {
+  justify-content: space-between !important;
+}
+
+@media (min-width: 1660px) {
+  .links-stack {
+    justify-content: start !important;
+  }
+}
