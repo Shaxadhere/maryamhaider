@@ -1,23 +1,17 @@
-import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
 import Brief from "./components/content/Brief";
 import DisplayPicture from "./components/content/DisplayPicture";
-import Experience from "./components/content/Experience";
 import Links from "./components/content/Links";
 import LocalTime from "./components/content/LocalTime";
 import Numbers from "./components/content/Numbers";
 import Projects from "./components/content/Projects";
 import Reviews from "./components/content/Reviews";
-import Monty from "./components/content/Monty";
 import Skills from "./components/content/Skills";
-import ProjectsList from "./components/content/ProjectsList";
-import FloatingGithubButton from "./components/misc/FloatingGithubButton";
-import Github from "./components/content/Github";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 const MotionGridItem = motion(GridItem);
-const MotionBox = motion(Box);
 
 const gridItems = [
   {
@@ -101,29 +95,35 @@ const App = () => {
   }, [projectsControls, projectsInView]);
 
   return (
-    <Box w={"full"} minH="100vh" py={{ base: "30px", lg: "60px" }}>
-      <Grid
-        templateColumns="repeat(20, 1fr)"
-        gap={{ base: 5, lg: 0 }}
-        templateRows="repeat(12, 1fr)"
+    <Flex justify={"center"}>
+      <Box
+        w={"full"}
+        minH="100vh"
+        py={{ base: "30px", lg: "60px" }}
+        maxW={"1800px"}
       >
-        {gridItems.map((item, index) => (
-          <MotionGridItem
-            key={index}
-            p={{ base: 0, lg: 3 }}
-            initial="initial"
-            animate="animate"
-            variants={pageVariants}
-            transition={{ delay: index * 0.5 }} // Further increase delay for slower stagger
-            rowSpan={item.rowSpan}
-            colSpan={item.colSpan}
-          >
-            {item.component}
-          </MotionGridItem>
-        ))}
-      </Grid>
+        <Grid
+          templateColumns="repeat(20, 1fr)"
+          gap={{ base: 5, lg: 0 }}
+          templateRows="repeat(12, 1fr)"
+        >
+          {gridItems.map((item, index) => (
+            <MotionGridItem
+              key={index}
+              p={{ base: 0, lg: 3 }}
+              initial="initial"
+              animate="animate"
+              variants={pageVariants}
+              transition={{ delay: index * 0.5 }} // Further increase delay for slower stagger
+              rowSpan={item.rowSpan}
+              colSpan={item.colSpan}
+            >
+              {item.component}
+            </MotionGridItem>
+          ))}
+        </Grid>
 
-      {/* <MotionBox
+        {/* <MotionBox
         ref={projectsRef}
         initial="hidden"
         animate={projectsControls}
@@ -134,8 +134,8 @@ const App = () => {
       >
         <ProjectsList />
       </MotionBox> */}
-
-    </Box>
+      </Box>
+    </Flex>
   );
 };
 
