@@ -3,7 +3,7 @@ import APP_IMAGES from "./images";
 
 export const INFORMATION = {
 
-    PROFILE_PICTURE: '/maryam.png',
+    PROFILE_PICTURE: '/maryam-display.png',
     ProfilePictureBlurred: "/maryam-reduced.jpg",
 
     NAME: "MARYAM HAIDER",
