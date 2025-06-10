@@ -71,7 +71,7 @@ Creating research based designs for various campaigns`,
         {
             designation: "Motion Artist & Graphic Designer",
             company: "PTAX Solutions",
-            link: "https://koderlabs.com",
+            link: "https://github.com/PTax-Solutions",
             timeline: "Feb 2023 - Dec 2023",
             text: `Created engaging social media posts for various digital platforms.
 Designed and animated eye-catching GIFs to enhance visual communication.
@@ -87,7 +87,7 @@ Developed innovative approaches for 2D animations and contributed to key visual 
         {
             designation: "Graphic Designer",
             company: "ARTT Business School",
-            link: "https://koderlabs.com",
+            link: "https://artt.edu.pk",
             timeline: "May 2021 - Dec 2022",
             text: `Crafted compelling social media posts across multiple digital platforms.
 Designed and animated vibrant class schedules to boost visual appeal.`,

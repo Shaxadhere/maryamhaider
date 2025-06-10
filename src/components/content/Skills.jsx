@@ -45,9 +45,8 @@ const Skills = () => {
 
             {hoveredSkill ? (
               <Icon
-                key={hoveredSkill} // Ensures animation retriggers when hoveredSkill changes
+                key={hoveredSkill}
                 rounded="lg"
-                // src={INFORMATION.SKILLS[hoveredSkill]}
                 as={INFORMATION.SKILLS[hoveredSkill]}
                 alt={hoveredSkill}
                 w="120px"

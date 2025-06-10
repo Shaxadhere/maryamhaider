@@ -1,5 +1,5 @@
 import { Box, Flex, Grid, GridItem } from "@chakra-ui/react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import Brief from "./components/content/Brief";
 import DisplayPicture from "./components/content/DisplayPicture";
 import Links from "./components/content/Links";
@@ -8,8 +8,6 @@ import Numbers from "./components/content/Numbers";
 import Projects from "./components/content/Projects";
 import Reviews from "./components/content/Reviews";
 import Skills from "./components/content/Skills";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
 const MotionGridItem = motion(GridItem);
 
@@ -72,28 +70,6 @@ const pageVariants = {
 };
 
 const App = () => {
-  const experienceControls = useAnimation();
-  const projectsControls = useAnimation();
-
-  const [experienceRef, experienceInView] = useInView({
-    threshold: 0.2,
-  });
-  const [projectsRef, projectsInView] = useInView({
-    threshold: 0.2,
-  });
-
-  useEffect(() => {
-    if (experienceInView) {
-      experienceControls.start("visible");
-    }
-  }, [experienceControls, experienceInView]);
-
-  useEffect(() => {
-    if (projectsInView) {
-      projectsControls.start("visible");
-    }
-  }, [projectsControls, projectsInView]);
-
   return (
     <Flex justify={"center"}>
       <Box
@@ -114,7 +90,7 @@ const App = () => {
               initial="initial"
               animate="animate"
               variants={pageVariants}
-              transition={{ delay: index * 0.5 }} // Further increase delay for slower stagger
+              transition={{ delay: index * 0.5 }}
               rowSpan={item.rowSpan}
               colSpan={item.colSpan}
             >
@@ -122,18 +98,6 @@ const App = () => {
             </MotionGridItem>
           ))}
         </Grid>
-
-        {/* <MotionBox
-        ref={projectsRef}
-        initial="hidden"
-        animate={projectsControls}
-        variants={{
-          hidden: { opacity: 0, y: 50 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-        }}
-      >
-        <ProjectsList />
-      </MotionBox> */}
       </Box>
     </Flex>
   );
