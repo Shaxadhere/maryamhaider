@@ -39,7 +39,7 @@ const Skills = () => {
         transition="all 0.2s ease-in-out"
         p="40px"
       >
-        <Flex flexDir="column" justify="space-between" color="#e8e6ee" h="full">
+        <Flex flexDir="column" justify="space-between" color="white" h="full">
           <Flex justify="space-between" alignItems="start" w="full">
             <Heading fontSize="24px">SKILLS</Heading>
 

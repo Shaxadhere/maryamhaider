@@ -77,7 +77,7 @@ const Brief = () => {
                   left={0}
                   right={0}
                   bottom={0}
-                  bgGradient="linear(to-r, transparent, pink, transparent)"
+                  bgGradient="linear(to-r, transparent, #c1daf3, transparent)"
                   opacity={0.5}
                   transform="skew(-12deg) scale(1.5)"
                   animation={`${shine} 3s infinite 0.3s`}

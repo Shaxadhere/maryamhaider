@@ -10,7 +10,7 @@ const IconBox = ({ title, link = "#", image, imageProps, icon, ...rest }) => {
       rounded="8px"
       justify={"center"}
       align={"center"}
-      bg={COLORS.DARK_PINK}
+      bg={'#a6cdf3'}
       maxW="full"
       as="a"
       target="_blank"

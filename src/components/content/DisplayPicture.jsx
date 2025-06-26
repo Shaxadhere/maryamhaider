@@ -18,7 +18,7 @@ const DisplayPicture = () => {
     >
       {/* Blurred Background Image */}
       <Box
-        bgImage={`url(${INFORMATION.ProfilePictureBlurred})`}
+        // bgImage={`url(${INFORMATION.ProfilePictureBlurred})`}
         bgPos="center"
         bgSize="cover"
         filter={isImageLoaded ? "grayscale(0%)" : "blur(20px) grayscale(80%)"}
